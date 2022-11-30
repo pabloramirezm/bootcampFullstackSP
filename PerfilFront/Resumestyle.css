@@ -1,0 +1,45 @@
+div { border-radius: 5px; }
+
+body{
+    background-image: url("Imagenes/Background4.jpg");
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+    backdrop-filter: blur(4px);
+    }
+    
+#top { z-index: 1; position: fixed; background-color: none; width: 93%; height: 60px; font-family: Times; margin-top: -10px; margin-bottom: 20px; }
+
+.left { float: left; background-color: none; width: 12%; height: 550px; margin-top: 55px; margin-bottom: 10px; border: 1px groove white; }
+
+.right { float: right; background-color: none; width: 87%; height: 550px; margin-top: 55px; margin-bottom: 10px; border: 1px groove white; }
+
+#bottom { margin-top: 20px; margin-bottom: 10px; clear: both; background-color: none; width: 99%; height: 60px; border: 1px groove white; font-family: Times; }
+
+#email { float: right; text-decoration: none; color: white; margin: 10px; }
+
+#email:hover { font-weight: bold; color: #1B23E0; }
+
+#name { float: left; font-weight: bold; color:#FAFAFA; font-size: 1.5em; margin: 22px 10px 10px 10px; }
+
+#name:hover { color: #20AFC9; }
+
+.content { margin: 10px; }
+
+h4 { color: #232154; }
+
+#github { text-align: right; color: #1B23E0; }
+
+span:hover { color: red; font-weight: bold; }
+
+ol { list-style: none; margin: 10px 0 0 -15px; color: #EBDD0E; font-size: 1em; }
+
+a:active { color: darkred; }
+
+#margen-top { margin-top: 25px; }
+
+#margen-top1 { margin-top: 85px; }
+
+#margen-top2 { margin-top: 195px; }
+
+
