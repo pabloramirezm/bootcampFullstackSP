@@ -1,0 +1,41 @@
+<header>
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+  <div class="cointaner-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggler="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+    <div class="me-auto collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <a class="p-3 navbar-brand">Financial Portal</a>
+        <li class="nav-item" routerLinkActive="active" (click)="Dashgo()">
+          <a class="p-3 nav-link" routerLink >Home</a>
+        </li>
+        <!-- <li class="nav-item" routerLinkActive="active" (click)="Custgo()">
+          <a class="p-3 nav-link" routerLink="customers">Customers</a>
+        </li> -->
+        <li class="nav-item" routerLinkActive="active" (click)="Trango()">
+          <a class="p-3 nav-link" routerLink>Transaction</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+ 
+  <button 
+  class="btn btn-danger"
+  (click)="Logout()" 
+  *ngIf="(auth.isAuthenticated$ | async)">Logout</button>
+  <div class="cointaner">
+ 
+  <a class="ms-auto nav-link disabled">User Admin</a>
+</div>
+</nav>
+
+
+
+
+  <router-outlet></router-outlet>
+
+</header>
+<!-- <br><br> -->

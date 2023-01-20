@@ -1,0 +1,35 @@
+<app-header></app-header>
+
+    
+ <div class="container"> <br>
+    <h4>List of Transactions</h4> 
+    <button type="button" class="btn btn-primary btn-md" (click)="Return()">Return</button>
+  
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">TransactionType</th>
+        <th scope="col">Description</th>
+        <th scope="col">Value of Transaction</th>
+        <th scope="col">Movement Type</th>
+        <th scope="col">Transaction Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let transfer of transfers" >
+            <th scope="row">{{ transfer.id }}</th>
+            <td>{{ transfer.transactionType }}</td>
+            <td>{{ transfer.description }}</td>
+            <td>{{ transfer.valueTransaction | currency}}</td>
+            <td>{{ transfer.movementType}}</td>
+            <td>{{ transfer.transactionDate | date: 'dd-MM-yyyy-h:mm:ss a':'+3:30'}}</td>
+        </tr>
+     </tbody>
+  </table>
+</div>
+
+<app-footer></app-footer>
+
+

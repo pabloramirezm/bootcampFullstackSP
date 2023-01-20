@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+    
+ <div class="container"> <br>
+    <h4>List of Accounts</h4> 
+    <button type="button" class="btn btn-primary btn-md" (click)="transfers()">Transaction</button>
+    
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">account Type</th>
+        <th scope="col">Status</th>
+        <th scope="col">Balance</th>
+        <th scope="col">Available Balance</th>
+        <th scope="col">account Number</th>
+        <th scope="col">Exenmpt GMF</th>
+        <th scope="col">Creation Date</th>
+        <th scope="col">Modification Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let account of accounts" (click)="Viewtransfers(account.accountNumber)" >
+        <th scope="row">{{ account.id }}</th>
+        <td>{{ account.accountType }}</td>
+        <td>{{ account.status }}</td>
+        <td>{{ account.balance | currency}}</td>
+        <td>{{ account.availableBalance | currency}}</td>
+        <td>{{ account.accountNumber}}</td>
+        <td>{{ account.exemptGMF }}</td>
+        <td>{{ account.creationDate | date: 'dd-MM-yyyy-h:mm:ss a':'+3:30'}}</td>
+        <td>{{ account.modificationDate | date: 'dd-MM-yyyy-h:mm:ss a':'+3:30'}}</td>
+      </tr>
+     </tbody>
+  </table>
+</div>
+
+<app-footer></app-footer>
+

@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+    
+ <div class="container"> <br>
+    <h4>List of Customers</h4> 
+    <button type="button" class="btn btn-primary btn-md" (click)="addCustomer()">Add Customer</button>
+  
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">email</th>
+        <th scope="col">Type id</th>
+        <th scope="col">Id Number</th>
+        <th scope="col">Date Of Birth</th>
+        <th scope="col">Creation Date</th>
+        <th scope="col">Modification Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers" (click)="editCustomer(customer.idNumber)">
+        <th scope="row">{{ customer.id }}</th>
+        <td>{{ customer.name }}</td>
+        <td>{{ customer.lastName }}</td>
+        <td>{{ customer.email }}</td>
+        <td>{{ customer.typeId }}</td>
+        <td>{{ customer.idNumber }}</td>
+        <td>{{ customer.dateOfBirth | date: 'dd-MM-yyyy':'+3:30'}}</td>
+        <td>{{ customer.creationDate | date: 'dd-MM-yyyy-h:mm:ss a':'+3:30'}}</td>
+        <td>{{ customer.modificationDate | date: 'dd-MM-yyyy-h:mm:ss a':'+3:30'}}</td>
+      </tr>
+     </tbody>
+  </table>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,45 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <form [formGroup]="formData1"  (ngSubmit)="postForm()"> 
+        <div class="form-group row"> 
+            <label for="exampleFormControlInput1">Account Type</label>
+            <select class="form-control"  formControlName="accountType">
+                <option>A</option>   
+                <option>C</option>    
+            </select>     
+            </div>
+        <div class="form-group row">
+            <label for="status">Status</label>
+            <select  class="form-control"  placeholder="Status" formControlName="status">
+                <option>activa</option>   
+                <option>inactiva</option>    
+            </select>     
+            </div>
+        <div class="form-group row">
+            <div class="col">
+                <label for="exampleFormControlInput3">Balance</label>
+                <input type="text" class="form-control"  placeholder="Balance" formControlName="balance">     
+            </div>
+            <div class="col">
+                <label for="exampleFormControlInput4">Available Balance</label>
+                <input type="text" class="form-control"  placeholder="Available Balance" formControlName="availableBalance">     
+            </div>
+            <div class="col">
+                <label for="exampleFormControlInput5">Exempt GMF</label>
+                <select class="form-control"   placeholder="Exempt GMF" formControlName="exemptGMF">     
+                  <option>true</option>   
+                  <option>false</option>    
+                </select>     
+                </div>
+            <br><br>
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-dark" (click)="exit()">Exit</button>
+        </div>
+            
+            
+    </form>
+
+
+  </div>
+<app-footer></app-footer>
+

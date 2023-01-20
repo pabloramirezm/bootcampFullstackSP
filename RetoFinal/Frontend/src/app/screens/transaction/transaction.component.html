@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+<div class="container">
+    <form  [formGroup]="formData2"  (ngSubmit)="postForm()">
+        <div class="form-group row">  
+    <div class="col">
+            <label for="description">Description</label>
+            <select class="form-control"  formControlName="description">
+                <option>Se realiza retiro</option>
+                <option>Se realiza consignación</option>
+                <option>Se realiza transferencia</option>
+            </select>
+        </div>
+        <div class="col">
+            <label for="exampleFormControlInput3">Movement Type</label>
+            <select class="form-control"  formControlName="movementType">
+                <option>R</option>   
+                <option>C</option>  
+                <option>T</option>   
+            </select>    
+        </div>
+    
+        <div class="form-group row">
+            <div class="col">
+                <label for="rootAccount">Root Account</label>
+                <input type="text" class="form-control"  placeholder="Root Account" formControlName="accountNumber2">     
+            </div>
+            <div class="col">
+                <label for="accountNumber2">Destination Account</label>
+                <input type="text" class="form-control"  placeholder="Destination Account" formControlName="accountNumber1" required>     
+            </div>
+        </div>
+          
+            <div class="col">
+                <label for="valueTransaction">Transaction Value</label>
+                <input type="text" class="form-control"  placeholder="Transaction Value" formControlName="valueTransaction">     
+            </div>
+        </div>
+            <br><br>
+            <button type="submit" class="btn btn-primary" [disabled]="!formData2.invalid">Execute</button>
+            <button type="button" class="btn btn-dark" (click)="exit()">Exit</button>
+            <button type="button" class="btn btn-primary"  (click)="submitForm()" [disabled]="formData2.invalid">Transfer</button>
+
+        </form>  
+<!-- [disabled]="formData2.invalid" -->
+<!-- [disabled]="!formData2.invalid" -->
+
+</div>
+
+<app-footer></app-footer>
